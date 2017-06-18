@@ -1,6 +1,6 @@
 <template>
   <div>
-      A wonderful quote goes here.
+      <slot></slot>
   </div>
 </template>
 <script>

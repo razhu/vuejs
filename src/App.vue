@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <quote></quote>
+    <quote>
+      <h1>Quote title</h1>
+      <p>Here goes the great quote...</p>
+    </quote>
   </div>
 </template>
 
