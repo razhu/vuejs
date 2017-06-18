@@ -2,6 +2,7 @@
     <div>
         <h1>carajo from quote component</h1>
         <slot></slot>
+        
     </div>
 </template>
 <script>

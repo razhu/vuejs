@@ -5,7 +5,10 @@
     <button type="" @click="quoteType = 'new'">New</button>
     <br>
     {{quoteType}}
+    <keep-alive>
     <component :is=quoteType></component>
+    </keep-alive>
+    
     <!--<quote>
       <h1>Quote title</h1>
       <p>Here goes the great quote...</p>
