@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <quote>
+    <button type="" @click="quoteType = 'quote'">Quote</button>
+    <button type="" @click="quoteType = 'author'">Author</button>
+    <button type="" @click="quoteType = 'new'">New</button>
+    <br>
+    {{quoteType}}
+    <component :is=quoteType></component>
+    <!--<quote>
       <h1>Quote title</h1>
       <p>Here goes the great quote...</p>
-    </quote>
+    </quote>--> 
   </div>
 </template>
 
 <script>
 import Quote from './components/Quotes.vue'
+import New from './components/New.vue'
+import Author from './components/Author.vue'
 export default {
   components:{
-    Quote
+    Quote,
+    New,
+    Author
+  },
+  data(){
+    return {
+      quoteType: ''
+    }
   }
 }
 </script>
