@@ -1,0 +1,85 @@
+1. event bus to transmit data between child components
+2. to have style for a particular component, use 'scoped'
+- <slot> is used to pass blocks of html o just ext
+NOTE about slots: the styling is set in the child component, everthing else is handled in the parten component
+slots props could be used to pass individual content
+- in dyamic componentes, they are destroy as you navigate but it can be kept alive
+with <keep-alive>
+-there are two life cycles we can use to monitor keeping alive a component:
+they are: activated, and deactivated
+
+//FORMS
+- input modifiers ej
+v.model.lazy.number
+this will only reflect once we click on somewhere else and will convert it to a number
+v.model.lazy.trim
+this will remove white or empy spaces before and or after a text
+
+<textarea>{{text}}<textarea> no, it does not wokr
+<textarea v-model="aText"><textarea> this works to have a default or placeholder
+
+-output with line breas
+<p style="white-space: pre">{{message}}</p>
+
+-when using checkboxes, use just one array. Vue js will add the values of the check ones
+
+- radio button. values of radio buttons attached to the same model. vuejs will hld the value of the elected one 
+
+-for dropdown menus, pu the model under <select> tag, not under <options>
+
+///////directives : v-something
+A directive has 5 life cycles: bind, inserted, update, componentUpdated, unbind
+
+/////filters and mixins
+filter: transfor output in the data. They always expect a value as input
+note vuejs doesnt ship with built-in filters
+they could be registed both globally and locally
+they are reprsented as something like 
+{{ algo | filter}}
+
+
+///NOTEEEE
+computed:{
+    //they are always functions, methods with return
+}
+//mixins: code or data to be shared among multiple compnents
+mixins are mered with data etc in a vue instance 
+but what is the component overrides a mixin data
+Note: mixins data are not shared, but copied to callers
+
+note. prefer computed over filters
+
+////ANIMATIONS
+//transitions: appliced to only one instance or elemnt
+        <transition>
+    requirements: el needs to be under transition tag and have a if or show conditional
+-enter
+-enter-activate
+-leave
+-leave-active
+have a look at https://daneden.github.io/animate.css/
+till this point we used css hooks to animate.
+we can also use js of course to animate...
+
+////transition group, somethign lke this
+<transition-group>
+    <li></li> //no ul!
+</transition-group>
+
+///HTTP
+vue resource
+use firebase for testing purposes
+
+when setting url as global, you use
+Vue.http...
+note there is not $ (dollar sign). you only use $ with a component
+
+///interceptors .eg you can override methods. POST for PUT for instace..
+
+//resoures... write resource 'replace' this.$http.post.. etc etc
+$http vs resources... you are better off with $http..
+....go read  vue resources docus
+
+////////Router. this is key for SPAs
+1. install vue-Router
+2. regiser routes. youcan do so in a file named router.js. there import components and the create routes, like path .. etc compponent etc
