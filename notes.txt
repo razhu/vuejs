@@ -1,4 +1,4 @@
-1. event bus to transmit data between child components
+nn1. event bus to transmit data between child components
 2. to have style for a particular component, use 'scoped'
 - <slot> is used to pass blocks of html o just ext
 NOTE about slots: the styling is set in the child component, everthing else is handled in the parten component
