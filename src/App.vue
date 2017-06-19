@@ -13,35 +13,51 @@
         </div>
         <button class="btn btn-primary" @click="submit">Submit</button>
       </div>
-      
     </div>
     <div class="row">
-      <p>{{message}}</p>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <button class="btn btn-primary" @click="showData">Show data</button>
+      </div>
+    </div>
+        <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+        <ul>
+          <li v-for="user in users">{{user.username}}  {{user.email}}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    data(){
+    data() {
       return {
-        user:{
-          username:'',
-          email:''
+        user: {
+          username: '',
+          email: ''
         },
-        message: ''
+        message: '',
+        users: []
       }
     },
-    methods:{
-      submit(){ 
-        this.$http.post('https://vuejs-http-a9715.firebaseio.com/data.json', this.user)
-        .then(respu => {
-          this.message ='user sent and saved.'
-          console.log(respu)
-        })
-        .catch(err => {
-          this.message = err
-        })
+    methods: {
+      submit() {
+        this.$http.post('', this.user)
+          .then(respu => {
+            this.message = 'user sent and saved.'
+            console.log(respu)
+          })
+          .catch(err => {
+            this.message = err
+          })
+      },
+      showData() {
+        this.$http.get('')
+          .then(result => result.json())
+          .then(respu2 => {
+            this.users = Object.keys(respu2).map(x => respu2[x])
+          })
       }
     }
   }
