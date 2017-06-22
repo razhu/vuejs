@@ -9,10 +9,10 @@ import Stock from './Stock.vue'
         data(){
             return {
                 stocks: [
-                    {name: "coca cola", price: 12},
-                    {name: "pepsi", price: 22},
-                    {name: "google", price: 312},
-                    {name: "samsung", price: 1222},
+                    {id:1, name: "coca cola", price: 12},
+                    {id:2, name: "pepsi", price: 22},
+                    {id:3, name: "google", price: 312},
+                    {id:4, name: "samsung", price: 1222},
                 ]
             }
         },

@@ -1,21 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div>
-    <ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="#">Home</a></li>
-  <li role="presentation"><a href="#">Profile</a></li>
-  <li role="presentation"><a href="#">Messages</a></li>
-</ul>
-  </div>
-</template>
-<script>
-  
-
-</script>
-<style>
-  
-</style>
-=======
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -38,4 +21,3 @@
   </div><!-- /.container-fluid -->
 </nav> 
 </template>
->>>>>>> 01f214ccd810623b2533d8d48763ee1fc76870fc
