@@ -1,23 +1,29 @@
 <template>
+  <!-- Columns are always 50% wide, on mobile and desktop -->
   <div class="container">
     <div class="row">
-    <headers></headers>
-      <h1>Routes</h1>
-      <hr>
-      <router-view></router-view>
+      <div class="col-6">
+        <my-header></my-header>
+        <router-view></router-view>
+      </div>
     </div>
   </div>
+
 </template>
 
 <script>
-  import Headers from './components/Header.vue'
-export default {
-  components:{
-    Headers
+  import Header from './components/Header.vue'
+  export default {
+    components: {
+      myHeader: Header
+    }
   }
-}
+
 </script>
 
 <style>
+  body {
+    padding: 30px;
+  }
 
 </style>
