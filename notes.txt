@@ -89,3 +89,49 @@ $http vs resources... you are better off with $http..
 A)central state
 
 B)Components access/modify A)
+
+Getters: fetch from A) calculate something maybe and then return it to components
+implementations:
+//store.js
+export const store = new Vuex.Store({
+    state: {
+        counter: 0
+    },
+    getters: {
+        doubleCounter: state => {
+            return state.counter * 2
+        }
+    }
+})
+//implementation:
+return this.$store.getters.doubleCounter
+
+//It is possible to a general getter (mapping getters) so you dont call individual getter each time.
+the downside is that it could look like you cant have your own methods under comuted.but...
+it is possible with es6.
+use three dotds, lke this... check. Might not work, in that case install something wit
+h babel 2 somethigns like that
+
+//mutations
+they change the state.
+you can map mutations. you use commits
+mutations are always sincrounous, therefore you dont have to run any async thing within a mutations
+
+so? how to combien async task with mutations??
+with... actions
+in actions you perfor asyn t
+ask then commit to mutations 
+
+note. mapGetters, mapMutations, mapActions they exist
+
+//beter folder strucdutre
+/store/modules
+
+//namespaces
+make sure getters, mutatations actions have unique  names!!!!
+a good practice would be to use a types.js file under store to store varialbes
+sort of global variables
+
+////////super resumen by creating the project
+
+ npm install --save-dev babel-preset-stage-2
