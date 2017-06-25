@@ -27,7 +27,6 @@
           quantity: this.quantity
         }
         this.quantity = 0
-        console.log("theBuy ", theBuy);
       }
     }
   }
