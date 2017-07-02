@@ -83,3 +83,7 @@ $http vs resources... you are better off with $http..
 ////////Router. this is key for SPAs
 1. install vue-Router
 2. regiser routes. youcan do so in a file named router.js. there import components and the create routes, like path .. etc compponent etc
+
+ALIAS
+alias ac="git add . && commit -m 'ok'"
+alias ch="git checkout master"
